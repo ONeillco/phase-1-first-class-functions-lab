@@ -1,14 +1,15 @@
 // Code your solution in this file!
-const drivers = ['Sally', 'Bob', 'Freddy', 'Claudia'];
+//const drivers = ['Sally', 'Bob', 'Freddy', 'Claudia'];
 
- function returnFirstTwoDrivers(){
-     const team1 = [ 'Sally', 'Bob' ]
-     return team1
+ function returnFirstTwoDrivers(drivers){
+    return drivers.slice(0, 2);
+
+     
    }
 
-function returnLastTwoDrivers(){
-    const team2 = [ 'Freddy', 'Claudia' ]
-    return team2
+function returnLastTwoDrivers(drivers){
+    return drivers.slice(-2)
+    
     }
  
 const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
@@ -32,7 +33,8 @@ function fareTripler(){
     return fare
 }
  
-function selectDifferentDrivers(){
-    return returnLastTwoDrivers(), returnFirstTwoDrivers()
+function selectDifferentDrivers(drivers, selectingDrivers){
+    
+    return  selectingDrivers(drivers)
     
 }
